@@ -1,0 +1,10 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: aws_ecs_task_definition.my_flask_app.arn
+
+        LoadBalancerInfo:
+          ContainerName: "tf_ecr_repository"
+          ContainerPort: 80
