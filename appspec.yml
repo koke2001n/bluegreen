@@ -4,6 +4,6 @@ Resources:
       Type: AWS::ECS::Service
       Properties:
         TaskDefinition: "<TASK_DEFINITION>" 
-          LoadBalancerInfo:
+        LoadBalancerInfo:
           ContainerName: "tf_ecr_repository"
           ContainerPort: 80
