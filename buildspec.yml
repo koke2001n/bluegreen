@@ -21,7 +21,6 @@ phases:
       - REPOSITORY_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPOSITORY_NAME}
       - IMAGE_TAG=$CODEBUILD_RESOLVED_SOURCE_VERSION
       - docker pull ${REPOSITORY_URI}:latest || true
-      - $(aws ecs describe-task-definition --task-definition $ECS_TASK_DEFINITION_ARN --query taskDefinition | jq '.containerDefinitions[0].image="<IMAGE1_NAME>"' > taskdef.json)
   build:
     commands:
       - docker build -t ${REPOSITORY_URI}:latest .
@@ -37,3 +36,4 @@ artifacts:
     files: 
       - imageDetail.json
       - taskdef.json
+      - appspec.yml

@@ -1,8 +1,8 @@
 FROM python:alpine
 
-WORKDIR /app
+WORKDIR /more
 
-COPY ./app /app
+COPY ./more /more
 
 RUN pip install Flask
 

@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: aws_ecs_task_definition.my_flask_app.arn
+        TaskDefinition:"<TASK_DEFINITION>"
 
         LoadBalancerInfo:
           ContainerName: "tf_ecr_repository"
