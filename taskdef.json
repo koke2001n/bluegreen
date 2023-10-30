@@ -1,9 +1,9 @@
-{
-    "taskRoleArn": "arn:aws:iam::914281350488:role/ecsTaskRole",
-    "executionRoleArn": "arn:aws:iam::914281350488:role/ecsTaskExecutionRole",
+{   
+    "taskRoleArn": "arn:aws:iam::914281350488:role/ecsTaskExecutionRole2",
+    "executionRoleArn": "arn:aws:iam::914281350488:role/ecsTaskExecutionRole2",
     "containerDefinitions": [
       {
-        "name": "blgr",
+        "name": "tf_ecr_repository",
         "image": "<IMAGE1_NAME>",
         "portMappings": [
           {
@@ -19,5 +19,6 @@
     "networkMode": "awsvpc",
     "cpu": "256",
     "memory": "512",
-    "family": "frontend"
+    "family": "tf_ecr_repository"
   }
+
